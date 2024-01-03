@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../../Services/Set & Fetch Detergents And Fragrances/save_fragrances.dart';
 import '../../../../Utils/constants.dart';
+import '../../../../Utils/toast_message.dart';
 import '../../Components/custom_btn.dart';
 import '../../Components/reusable_text.dart';
 import '../Reusable Components/top_cross_icon_bottom_sheet.dart';
@@ -120,6 +121,7 @@ class _FragranceBottomSheetContentState
               onTapFunction: () {
                 saveFragrance(fragranceNames[selectedIndex]);
                 Get.back();
+                Utils().toastMessage('Details Added');
               },
               txtWeight: FontWeight.w600,
               txtFontSize: screenWidth * 0.04,

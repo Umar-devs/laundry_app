@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:laundry_app/Utils/toast_message.dart';
 import '../../../../Services/Schedule Services/seve_time_slot.dart';
 import '../../../../Utils/constants.dart';
 import '../../Components/custom_btn.dart';
@@ -93,6 +94,7 @@ class _ScheduleDropOffBottomSheetContentState
                 Get.to(const InstructionsTab(),
                     duration: const Duration(milliseconds: 700),
                     transition: Transition.fadeIn);
+                Utils().toastMessage('Details Added');
               },
               txtWeight: FontWeight.w600,
               txtFontSize: screenWidth * 0.04,

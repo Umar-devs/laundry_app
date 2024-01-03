@@ -1,7 +1,7 @@
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:laundry_app/View/Pages/Authentication/Register/terms_and_conditions.dart';
 import '../../../../Controller/Auth controller/auth_controller.dart';
 import '../../../../Utils/constants.dart';
 import '../../../../Utils/toast_message.dart';
@@ -56,7 +56,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ],
               ),
-
               Padding(
                 padding: EdgeInsets.only(
                   left: screenWidth * 0.085,
@@ -142,12 +141,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: CheckboxListTile(
                           checkColor: Colors.white,
                           activeColor: const Color(0xff063585),
-                          title: ReusableText(
-                              weight: FontWeight.w600,
-                              alignTxt: TextAlign.start,
-                              fontSize: screenWidth * 0.027,
-                              lbl:
-                                  'Accept our Terms of use and Privacy Policy'),
+                          title: GestureDetector(
+                            onTap: () {
+                              Get.to(const TermsAndConditions(),
+                                  transition: Transition.rightToLeft);
+                            },
+                            child: RichText(
+                                textAlign: TextAlign.start,
+                                text: TextSpan(
+                                    text: 'Accept our ',
+                                    children: [
+                                      TextSpan(
+                                        text: 'Terms of use and Privacy Policy',
+                                        style: TextStyle(
+                                            fontSize: screenWidth * 0.027,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black
+                                        )
+                                      )
+                                    ],
+                                    style: TextStyle(
+                                      fontSize: screenWidth * 0.029,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black
+                                    )),
+
+                            ),
+                          ),
                           value: checkedValue,
                           onChanged: (newValue) {
                             setState(() {

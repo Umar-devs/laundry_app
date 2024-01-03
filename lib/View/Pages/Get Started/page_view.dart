@@ -70,8 +70,8 @@ class PageViewScreen extends StatelessWidget {
                   btnHeight: screenHeight*0.05,
                   btnWidth: screenWidth * 0.8,
                   onTapFunction: () {
-                    Get.to(LoginScreen(),
-                        transition: Transition.fadeIn,
+                    Get.to(const LoginScreen(),
+                        transition: Transition.rightToLeft,
                         duration: const Duration(milliseconds: 700));
                   },
                   txtWeight: FontWeight.w600,

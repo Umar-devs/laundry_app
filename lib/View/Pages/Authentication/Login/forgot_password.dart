@@ -4,11 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 import '../../../../Utils/constants.dart';
-import '../../../../Utils/toast_message.dart';
 import '../../Components/custom_btn.dart';
 import '../../Components/reusable_text.dart';
 import '../Components/txtField.dart';
-import 'done_forgot_password.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   ForgotPasswordScreen({super.key});

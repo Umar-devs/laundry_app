@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../Utils/constants.dart';
-import '../../Components/txtField.dart';
 
 class FirstLastNameRow extends StatelessWidget {
   const FirstLastNameRow(
@@ -12,7 +10,7 @@ class FirstLastNameRow extends StatelessWidget {
   final TextEditingController secNameController;
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
 

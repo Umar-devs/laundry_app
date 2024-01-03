@@ -22,10 +22,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final Widget homeScreen;
     final auth=FirebaseAuth.instance.currentUser;
 
-    return  GetMaterialApp(
+    return   GetMaterialApp(
       home: auth==null?const SplashScreen():const MyBottomNavBar(),
       debugShowCheckedModeBanner: false,
     );

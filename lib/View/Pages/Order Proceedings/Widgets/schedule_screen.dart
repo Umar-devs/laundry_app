@@ -60,13 +60,14 @@ class _ScheduleTabState extends State<ScheduleTab> {
                   SizedBox(
                     width: screenWidth * 0.1,
                   ),
-             const SelectedImg(img: 'assets/images/schedule white.png'),
-                const DottedImage(),
-                 const UnselectedImage(img: 'assets/images/instruction icon.png'),
+                  const SelectedImg(img: 'assets/images/schedule white.png'),
                   const DottedImage(),
-                const UnselectedImage(img: 'assets/images/address icon.png'),
-                 const DottedImage(),
-                 const UnselectedImage(img: 'assets/images/summary icon.png')
+                  const UnselectedImage(
+                      img: 'assets/images/instruction icon.png'),
+                  const DottedImage(),
+                  const UnselectedImage(img: 'assets/images/address icon.png'),
+                  const DottedImage(),
+                  const UnselectedImage(img: 'assets/images/summary icon.png')
                 ],
               ),
             ),
@@ -84,26 +85,18 @@ class _ScheduleTabState extends State<ScheduleTab> {
               child: Card(
                 color: Colors.white,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
-                      width: screenWidth * 0.04,
-                    ),
                     Image.asset(
                       'assets/images/schedule box icon.png',
                       height: screenHeight * 0.05,
                       width: screenWidth * 0.08,
                     ),
-                    SizedBox(
-                      width: screenWidth * 0.07,
-                    ),
                     ReusableText(
                       weight: FontWeight.w600,
                       fontSize: screenWidth * 0.04,
-                      lbl: 'Schedule your Pickup',
+                      lbl: 'Schedule your Pick Up',
                       clr: const Color(0xff02348a),
-                    ),
-                    SizedBox(
-                      width: screenWidth * 0.07,
                     ),
                     FaIcon(
                       FontAwesomeIcons.plus,
@@ -123,32 +116,24 @@ class _ScheduleTabState extends State<ScheduleTab> {
             width: screenWidth * 0.9,
             child: GestureDetector(
               onTap: () {
-                Get.bottomSheet(const ScheduleDropOffBottomSheetContent(
-                ));
+                Get.bottomSheet(const ScheduleDropOffBottomSheetContent());
               },
               child: Card(
                 color: Colors.white,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
-                      width: screenWidth * 0.04,
-                    ),
+
                     Image.asset(
                       'assets/images/schedule box icon.png',
                       height: screenHeight * 0.05,
                       width: screenWidth * 0.08,
                     ),
-                    SizedBox(
-                      width: screenWidth * 0.07,
-                    ),
                     ReusableText(
                       weight: FontWeight.w600,
                       fontSize: screenWidth * 0.04,
-                      lbl: 'Schedule Drop Off',
+                      lbl: 'Schedule your Drop Off',
                       clr: const Color(0xff02348a),
-                    ),
-                    SizedBox(
-                      width: screenWidth * 0.15,
                     ),
                     FaIcon(
                       FontAwesomeIcons.plus,

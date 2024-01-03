@@ -55,7 +55,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                   dotColor: Colors.white70,
                   dotHeight: 13,
                   dotWidth: 13,
-                  spacing: screenWidth * 0.05
+                  spacing: screenWidth * 0.05,
                   // jumpScale: 2,
                   ),
             ),

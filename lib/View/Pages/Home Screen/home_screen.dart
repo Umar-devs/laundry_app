@@ -47,7 +47,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         fit: BoxFit.fill,
                       )),
                   const Spacer(),
-                  const AboutBtn(),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 4.0),
+                    child: AboutBtn(),
+                  ),
                 ],
               ),
             ),

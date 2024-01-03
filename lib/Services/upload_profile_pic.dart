@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -73,11 +72,9 @@ Future<void> updateImageOnFirebaseStorageAndDatabase(File newImageFile) async {
 
     // Check if the previous image exists
     final existingImageSnapshot = await existingImageRef.getDownloadURL();
-    if (existingImageSnapshot != null) {
-      // The previous image exists, delete it from Firebase Storage
-      await existingImageRef.delete();
-    }
-
+    // The previous image exists, delete it from Firebase Storage
+    await existingImageRef.delete();
+  
     // Upload the new image to Firebase Storage
     final task = storageRef.child(fileName).putFile(newImageFile);
 

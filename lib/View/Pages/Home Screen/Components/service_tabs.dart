@@ -20,6 +20,7 @@ class ServicesTabs extends StatelessWidget {
     'Iron',
     'Fold',
   ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -74,7 +75,7 @@ class ServicesTabs extends StatelessWidget {
                           ),
                           Positioned(
                             bottom: screenHeight * 0.017,
-                            left: screenWidth * 0.09,
+                            left: screenWidth * 0.08,
                             child: Container(
                               height: screenHeight * 0.025,
                               width: screenWidth * 0.22,

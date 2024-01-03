@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:laundry_app/View/Pages/Profile%20Screen/Components/user_details_tile.dart';
-import '../../../../Services/handle_auth_services.dart';
 import '../../../../Services/name_change_in_database.dart';
 import '../../../../Utils/constants.dart';
 import '../../Authentication/Login/login_screen.dart';
@@ -31,7 +30,7 @@ class UserDetails extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                auth.currentUser?.displayName==null
+                auth.currentUser?.displayName == null
                     ? Obx(() => ReusableText(
                         weight: FontWeight.w400,
                         clr: Colors.black,
@@ -42,7 +41,7 @@ class UserDetails extends StatelessWidget {
                         clr: Colors.black,
                         fontSize: screenWidth * 0.033,
                         lbl: auth.currentUser?.displayName),
-                auth.currentUser?.displayName==null
+                auth.currentUser?.displayName == null
                     ? GestureDetector(
                         onTap: () {
                           showChangeNameDialog(
@@ -92,6 +91,7 @@ class UserDetails extends StatelessWidget {
           child: GestureDetector(
             onTap: () async {
               // AuthService(context).signOut();
+              await FirebaseAuth.instance.signOut();
               Get.offAll(
                 const LoginScreen(),
                 duration: const Duration(milliseconds: 1200),

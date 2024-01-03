@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:laundry_app/View/Pages/Home%20Screen/Components/bottom_nav_bar.dart';
 import '../../../../Controller/Auth controller/auth_controller.dart';
 import '../../../../Utils/constants.dart';
 import '../../Components/reusable_text.dart';
 import '../Components/txtField.dart';
 import 'Components/ref_to_register_screen.dart';
-import 'Components/social_login.dart';
 import 'forgot_password.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -30,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(vertical: screenHeight*0.02),
       height: screenHeight,
       width: screenWidth,
       color: Colors.grey.shade200,
@@ -41,8 +40,8 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
-                'assets/images/app icons-09.png',
-                height: screenHeight * 0.17,
+                'assets/images/updated logo.png',
+                height: screenHeight * 0.08,
               ),
               Column(
                 children: [
@@ -134,32 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         clr: const Color(0xff063585),
                         lbl: 'Forgot Password?')),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: screenWidth * 0.073,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SizedBox(
-                        width: screenWidth * 0.36,
-                        child: Divider(
-                          color: Colors.grey.shade400,
-                        )),
-                    ReusableText(
-                        weight: FontWeight.w500,
-                        fontSize: screenWidth * 0.036,
-                        clr: Colors.grey.shade500,
-                        lbl: 'Or'),
-                    SizedBox(
-                        width: screenWidth * 0.36,
-                        child: Divider(
-                          color: Colors.grey.shade400,
-                        )),
-                  ],
-                ),
-              ),
-              SocialLoginRow(),
+
               const ReferenceToRegisterScreen(),
             ],
           ),

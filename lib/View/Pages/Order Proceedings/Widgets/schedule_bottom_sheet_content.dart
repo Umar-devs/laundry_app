@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:laundry_app/Utils/toast_message.dart';
 import '../../../../Services/Schedule Services/seve_time_slot.dart';
 import '../../../../Utils/constants.dart';
 import '../../Components/custom_btn.dart';
@@ -95,6 +96,7 @@ class _SchedulePickUpBottomSheetContentState
               btnHeight: screenHeight * 0.05,
               btnWidth: screenWidth * 0.8,
               onTapFunction: () {
+                Utils().toastMessage('Details Added');
                 Get.back();
               },
               txtWeight: FontWeight.w600,

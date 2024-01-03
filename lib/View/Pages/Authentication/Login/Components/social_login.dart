@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../../../../../Controller/Auth controller/auth_controller.dart';
 import '../../../../../Utils/constants.dart';
-import '../../../Home Screen/Components/bottom_nav_bar.dart';
 
 class SocialLoginRow extends StatelessWidget {
-  SocialLoginRow({super.key});
+  const SocialLoginRow({super.key});
   // final AuthController controller = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {

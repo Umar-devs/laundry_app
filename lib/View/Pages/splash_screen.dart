@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
                 width: 10.0,
                 height: 10.0,
                 duration: Duration.zero,
-                child: Image.asset('assets/images/Splash Screen Icon.png'),
+                child: Image.asset('assets/images/updated logo.png'),
               );
             } else {
               return AnimatedContainer(
@@ -34,7 +34,7 @@ class SplashScreen extends StatelessWidget {
                 height: screenHeight * 0.55,
                 duration: const Duration(seconds: 1),
                 curve: Curves.easeIn,
-                child: Image.asset('assets/images/app icons-09.png'),
+                child: Image.asset('assets/images/updated logo.png'),
               );
             }
           },

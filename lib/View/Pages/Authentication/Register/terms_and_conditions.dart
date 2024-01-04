@@ -40,7 +40,7 @@ class TermsAndConditions extends StatelessWidget {
                   ReusableText(
                     weight: FontWeight.w700,
                     fontSize: screenWidth * 0.05,
-                    lbl: 'Terms And Conditions.',
+                    lbl: 'Terms And Conditions',
                     clr: themeColor,
                   ),
                 ],
